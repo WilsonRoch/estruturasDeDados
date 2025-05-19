@@ -16,7 +16,9 @@ Celula *inserir(int dado, Celula *lista) {
         return novo;
     }
     Celula *p;
-    for (p = lista; p->prox != NULL; p = p->prox);
+    for (p = lista; p->prox != NULL; p = p->prox) {
+      if (dado == p->dado) return lista; //controle de duplicados no metodo sem recursao
+    }
     // encadear e retornar
     p->prox = novo;
     return lista;
@@ -36,4 +38,11 @@ Celula *inseriR(int dado, Celula *lista) {
         novo->prox = NULL;
         return novo;
     }
+}
+
+void exibirR(Celula *lista) {
+    for (Celula *p = lista; p != NULL; p->prox) {
+        cout << p->dado << "\t";
+    }
+    cout << endl;
 }

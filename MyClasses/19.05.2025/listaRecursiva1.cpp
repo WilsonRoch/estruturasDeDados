@@ -1,7 +1,7 @@
 #include <iostream>
 #include "listas.h"
-
-using_namespace std;
+#include <cstdlib>
+using namespace std;
 
 int main() {
     Celula * lista = NULL;
@@ -11,8 +11,8 @@ int main() {
     lista = inseriR(7, lista);
     lista = inseriR(10, lista);
 
-    exibiR(lista);
+    exibirR(lista);
 
-    return 1
+    return 1;
 }
 
